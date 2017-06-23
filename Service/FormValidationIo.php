@@ -5,6 +5,7 @@ namespace ACSEO\Bundle\FormJsValidationBundle\Service;
 class FormValidationIo
 {
     private $validator;
+    private $translator;
 
     // http://formvalidation.io/validators/
     private $mapping = array(
@@ -12,9 +13,10 @@ class FormValidationIo
         "Email" => "data-fv-emailaddress"
     );
 
-    public function __construct($validator)
+    public function __construct($validator, $translator)
     {
         $this->validator = $validator;
+        $this->translator = $translator;
     }
 
     public function addJsValidation($form, $validationGroup = "Default")
@@ -34,11 +36,12 @@ class FormValidationIo
                                 $options["attr"] = array();
                             }
                             $constraintName = ((new \ReflectionClass($constraint))->getShortName());
-                            // if (!isset($mapping[$constraintName])) {
-                            //     throw new \Exception("The constraint ". $constraintName." is not known");
-                            // }
+                            if (!isset($this->mapping[$constraintName])) {
+                                continue;
+                                // throw new \Exception("The constraint ". $constraintName." is not known");
+                            }
                             $options["attr"][$this->mapping[$constraintName]] = "true";
-                            $options["attr"][$this->mapping[$constraintName]."-message"] = $constraint->message;
+                            $options["attr"][$this->mapping[$constraintName]."-message"] = $this->translator->trans($constraint->message);
                         }
 
                     }
