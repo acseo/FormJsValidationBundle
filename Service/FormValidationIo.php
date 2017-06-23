@@ -1,6 +1,6 @@
 <?php
 
-namespace ACSEO\FormJsValidationBundle\Service;
+namespace ACSEO\Bundle\FormJsValidationBundle\Service;
 
 class FormValidationIo
 {

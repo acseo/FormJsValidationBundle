@@ -1,6 +1,6 @@
 <?php
 
-namespace ACSEO\FormJsValidationBundle\DependencyInjection;
+namespace ACSEO\Bundle\FormJsValidationBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

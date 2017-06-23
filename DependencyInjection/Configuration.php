@@ -1,6 +1,6 @@
 <?php
 
-namespace ACSEO\FormJsValidationBundle\DependencyInjection;
+namespace ACSEO\Bundle\FormJsValidationBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

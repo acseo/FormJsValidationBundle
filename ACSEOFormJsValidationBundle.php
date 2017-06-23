@@ -1,6 +1,6 @@
 <?php
 
-namespace ACSEO\FormJsValidationBundle;
+namespace ACSEO\Bundle\FormJsValidationBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

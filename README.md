@@ -21,7 +21,7 @@ class AppKernel extends Kernel
     {
         $bundles = [
         // ...
-        new ACSEO\FormJsValidationBundle\ACSEOFormJsValidationBundle(),
+        new ACSEO\Bundle\FormJsValidationBundle\ACSEOFormJsValidationBundle(),
         // ...
 ```
 
