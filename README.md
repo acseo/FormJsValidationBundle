@@ -7,7 +7,7 @@ A bundle that add js validation to you forms
 1) Install using composer
 
 ```
-composer acseo/form-js-validation-bundle
+composer require acseo/form-js-validation-bundle
 ```
 
 2) update AppKernel.php :
