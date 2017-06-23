@@ -1,0 +1,25 @@
+{
+    "name": "acseo/form-js-validation-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony Form Js Validation Bundle",
+    "keywords": ["Symfony", "form", "javascript", "validation"],
+    "homepage": "https://github.com/acseo/FormJsValidationBundle",
+    "authors": [
+        {
+            "name": "Nicolas Potier",
+            "email": "nicolas.potier@acseo.fr"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/symfony": ">=3.0.0"
+    },
+    "suggest": {
+
+    },
+    "autoload": {
+        "psr-0": { "ACSEO\\Bundle\\FormJsValidationBundle": "" }
+    },
+    "target-dir": "ACSEO/Bundle/FormJsValidationBundle",
+    "minimum-stability": "dev"
+}
