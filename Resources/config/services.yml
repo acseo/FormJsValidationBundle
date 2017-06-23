@@ -1,4 +1,4 @@
 services:
    acseo_form_js_validation_io:
        class: ACSEO\Bundle\FormJsValidationBundle\Service\FormValidationIo
-       arguments: ["@validator"]
+       arguments: ["@validator", "@translator" ]
