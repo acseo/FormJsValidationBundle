@@ -1,4 +1,11 @@
 services:
+   acseo_form_js_validation:
+       arguments: ["%acseo_form_js_validation.service%" ]
+
+   acseo_form_jquery_form_validator:
+       class: ACSEO\Bundle\FormJsValidationBundle\Service\JqueryFormValidator
+       arguments: ["@validator", "@translator" ]
+
    acseo_form_js_validation_io:
        class: ACSEO\Bundle\FormJsValidationBundle\Service\FormValidationIo
        arguments: ["@validator", "@translator" ]
