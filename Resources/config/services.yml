@@ -1,6 +1,7 @@
 services:
    acseo_form_js_validation:
-       arguments: ["%acseo_form_js_validation.service%" ]
+       class: ACSEO\Bundle\FormJsValidationBundle\Service\FormJsValidator
+       arguments: ["@=service(container.hasParameter('acseo_form_js_validation.service') ? parameter('acseo_form_js_validation.service') : 'acseo_form_jquery_form_validator')"]
 
    acseo_form_jquery_form_validator:
        class: ACSEO\Bundle\FormJsValidationBundle\Service\JqueryFormValidator
