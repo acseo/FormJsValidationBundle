@@ -3,8 +3,9 @@
 namespace ACSEO\Bundle\FormJsValidationBundle\Service;
 
 use ACSEO\Bundle\FormJsValidationBundle\Service\AbstractFormJsValidation;
+use ACSEO\Bundle\FormJsValidationBundle\Service\FormJsValidatorInterface;
 
-class JqueryValidation extends AbstractFormJsValidation
+class JqueryFormValidator extends AbstractFormJsValidation implements FormJsValidatorInterface
 {
     protected function getMapping()
     {
