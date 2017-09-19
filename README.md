@@ -94,7 +94,7 @@ $(document).ready(function() {
 ```twig
 <!-- new.html.twig -->
 
-{{ form_start(form, {'attr': { 'id' : 'awesome_entity_form', 'data-fv-framework' : 'bootstrap', }}) }}
+{{ form_start(form, {'attr': {'id': 'awesome_entity_form'}}) }}
 
 <!-- display your form here -->
 
