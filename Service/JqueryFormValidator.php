@@ -22,7 +22,7 @@ class JqueryFormValidator extends AbstractFormJsValidation implements FormJsVali
             // String Constraints
             "Email" => function ($constraint, $translator) {
                 return array(
-                    'data-rule-email' => $constraint->limit,
+                    'data-rule-email' => true,
                     'data-msg-email' => $translator->trans($constraint->message),
                 );
             },
@@ -78,5 +78,15 @@ class JqueryFormValidator extends AbstractFormJsValidation implements FormJsVali
         ];
 
         return $mapping;
+    }
+
+    protected function addEqualToConstraint($field, $attrOptions)
+    {
+        $parentOptions = $field->getParent()->getConfig()->getOptions();
+
+        $attrOptions['data-rule-equalTo'] = '#'.$this->getFieldId($field->getParent()->get('first'));
+        $attrOptions['data-msg-equalTo'] = $this->translator->trans(isset($parentOptions['invalid_message']) ? $parentOptions['invalid_message'] : 'Les deux champs doivent être identiques.');
+
+        return $attrOptions;
     }
 }
