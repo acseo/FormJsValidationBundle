@@ -14,7 +14,7 @@ class JqueryFormValidator extends AbstractFormJsValidation implements FormJsVali
             // Basic Constraints
             "NotBlank" => function ($constraint, $translator) {
                 return array(
-                    'data-rule-required' => true,
+                    'data-rule-required' => 'true',
                     'data-msg-required' => $translator->trans($constraint->message),
                 );
             },
@@ -22,7 +22,7 @@ class JqueryFormValidator extends AbstractFormJsValidation implements FormJsVali
             // String Constraints
             "Email" => function ($constraint, $translator) {
                 return array(
-                    'data-rule-email' => true,
+                    'data-rule-email' => 'true',
                     'data-msg-email' => $translator->trans($constraint->message),
                 );
             },
@@ -49,7 +49,7 @@ class JqueryFormValidator extends AbstractFormJsValidation implements FormJsVali
             },
             "Url" => function ($constraint, $translator) {
                 return array(
-                    'data-rule-url' => true,
+                    'data-rule-url' => 'true',
                     'data-msg-url' => $translator->trans($constraint->message),
                 );
             },
