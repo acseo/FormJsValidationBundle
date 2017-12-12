@@ -75,7 +75,12 @@ class JqueryFormValidator extends AbstractFormJsValidation implements FormJsVali
                     "data-msg-min" => $translator->trans($constraint->message),
                 );
             },
-
+            "GreaterThan" => function ($constraint, $translator) {
+                return array(
+                    "data-rule-min" => $constraint->value,
+                    "data-msg-min" => $translator->trans($constraint->message),
+                );
+            },
             // Date Constraints
             "Date" => function ($constraint, $translator) {
                 return array(
