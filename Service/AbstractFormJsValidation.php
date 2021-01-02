@@ -3,6 +3,7 @@
 namespace ACSEO\Bundle\FormJsValidationBundle\Service;
 
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 
 abstract class AbstractFormJsValidation
 {
@@ -45,6 +46,13 @@ abstract class AbstractFormJsValidation
                         $options["attr"] = array_merge($options["attr"], $newAttrs);
                     }
                 }
+                if ($innerType instanceof NumberType) {
+                    $options["attr"] = array_merge(
+                        array(
+                            "data-rule-number" => 'true'
+                        )
+                    );
+                }                
                 if ($innerType instanceof RepeatedType) {
                     $firstOptions = isset($options["first_options"]) ? $options["first_options"] : array();
                     $options["first_options"] = $this->addRepeatedFieldJsValidation($mapping, $constraints, $field->get('first'), $firstOptions, $validationGroup);
